@@ -1,0 +1,844 @@
+
+jayden harris <jaydenharris427@gmail.com>
+1:48 PM (0 minutes ago)
+to me
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon.com - Deals & Savings | Online Shopping</title>
+<link href="https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+font-family: Arial, sans-serif;
+font-size: 13px;
+color: #0F1111;
+background: #EAEDED;
+}
+
+/* ── WARNING BANNER ── */
+.warning-banner {
+background: #CC0000;
+color: #fff;
+text-align: center;
+padding: 10px 20px;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 0.5px;
+position: sticky;
+top: 0;
+z-index: 9999;
+}
+
+/* ── TOP NAV ── */
+.nav-top {
+background: #131921;
+color: #fff;
+display: flex;
+align-items: center;
+padding: 8px 12px;
+gap: 8px;
+flex-wrap: wrap;
+}
+
+.nav-logo {
+display: flex;
+align-items: flex-end;
+gap: 1px;
+text-decoration: none;
+border: 1px solid transparent;
+padding: 4px 6px;
+border-radius: 2px;
+}
+.nav-logo:hover { border-color: #fff; }
+.nav-logo .logo-text {
+font-size: 22px;
+font-weight: 700;
+color: #fff;
+letter-spacing: -1px;
+}
+.nav-logo .logo-dot {
+font-size: 10px;
+color: #FF9900;
+margin-bottom: 4px;
+font-weight: bold;
+}
+
+.nav-deliver {
+color: #ccc;
+font-size: 11px;
+line-height: 1.3;
+padding: 4px 6px;
+border: 1px solid transparent;
+border-radius: 2px;
+cursor: pointer;
+}
+.nav-deliver:hover { border-color: #fff; }
+.nav-deliver strong { color: #fff; font-size: 13px; display: block; }
+
+.nav-search {
+flex: 1;
+display: flex;
+min-width: 200px;
+height: 40px;
+}
+.search-category {
+background: #F3F3F3;
+border: none;
+padding: 0 8px;
+border-radius: 4px 0 0 4px;
+font-size: 12px;
+color: #555;
+cursor: pointer;
+border-right: 1px solid #cdcdcd;
+}
+.search-input {
+flex: 1;
+border: none;
+padding: 0 10px;
+font-size: 14px;
+outline: none;
+}
+.search-btn {
+background: #FF9900;
+border: none;
+padding: 0 14px;
+border-radius: 0 4px 4px 0;
+cursor: pointer;
+font-size: 18px;
+}
+.search-btn:hover { background: #E88B00; }
+
+.nav-account {
+color: #ccc;
+font-size: 11px;
+line-height: 1.4;
+padding: 4px 6px;
+border: 1px solid transparent;
+border-radius: 2px;
+cursor: pointer;
+}
+.nav-account:hover { border-color: #fff; }
+.nav-account strong { color: #fff; font-size: 13px; display: block; }
+
+.nav-orders {
+color: #ccc;
+font-size: 11px;
+line-height: 1.4;
+padding: 4px 6px;
+border: 1px solid transparent;
+border-radius: 2px;
+cursor: pointer;
+}
+.nav-orders:hover { border-color: #fff; }
+.nav-orders strong { color: #fff; font-size: 13px; display: block; }
+
+.nav-cart {
+display: flex;
+align-items: center;
+gap: 4px;
+color: #fff;
+font-size: 13px;
+font-weight: bold;
+padding: 4px 6px;
+border: 1px solid transparent;
+border-radius: 2px;
+cursor: pointer;
+}
+.nav-cart:hover { border-color: #fff; }
+.cart-count {
+color: #FF9900;
+font-size: 18px;
+font-weight: bold;
+line-height: 1;
+}
+
+/* ── NAV BAR 2 ── */
+.nav-bar2 {
+background: #232F3E;
+color: #fff;
+display: flex;
+align-items: center;
+padding: 4px 12px;
+gap: 2px;
+overflow-x: auto;
+}
+.nav-bar2 a {
+color: #fff;
+text-decoration: none;
+padding: 6px 8px;
+white-space: nowrap;
+font-size: 13px;
+border: 1px solid transparent;
+border-radius: 2px;
+}
+.nav-bar2 a:hover { border-color: #fff; }
+.nav-bar2 .all-btn {
+display: flex;
+align-items: center;
+gap: 5px;
+font-weight: bold;
+}
+.nav-bar2 .promo { color: #FF9900; font-weight: bold; }
+
+/* ── ALERT BANNER (phishing hook) ── */
+.alert-banner {
+background: #FFF3CD;
+border-bottom: 2px solid #FF9900;
+padding: 12px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 12px;
+}
+.alert-content {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+.alert-icon { font-size: 22px; }
+.alert-text { font-size: 14px; }
+.alert-text strong { color: #B12704; }
+.alert-btn {
+background: #FF9900;
+border: none;
+padding: 8px 18px;
+border-radius: 3px;
+font-weight: bold;
+font-size: 13px;
+cursor: pointer;
+white-space: nowrap;
+box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.alert-btn:hover { background: #E88B00; }
+
+/* ── HERO / CAROUSEL ── */
+.hero {
+position: relative;
+background: linear-gradient(135deg, #232F3E 0%, #37475A 100%);
+overflow: hidden;
+height: 340px;
+display: flex;
+align-items: center;
+}
+.hero-bg {
+position: absolute;
+inset: 0;
+background: linear-gradient(90deg, rgba(0,0,0,0.6) 0%, transparent 60%);
+}
+.hero-content {
+position: relative;
+z-index: 1;
+padding: 40px 60px;
+color: #fff;
+max-width: 500px;
+}
+.hero-tag {
+background: #FF9900;
+color: #000;
+font-size: 11px;
+font-weight: bold;
+padding: 3px 8px;
+border-radius: 2px;
+display: inline-block;
+margin-bottom: 12px;
+letter-spacing: 1px;
+}
+.hero h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; line-height: 1.2; }
+.hero p { font-size: 15px; color: #ddd; margin-bottom: 20px; }
+.hero-btn {
+background: #FF9900;
+color: #000;
+border: none;
+padding: 12px 28px;
+font-size: 15px;
+font-weight: bold;
+border-radius: 3px;
+cursor: pointer;
+}
+.hero-btn:hover { background: #E88B00; }
+
+.hero-visual {
+position: absolute;
+right: 60px;
+top: 50%;
+transform: translateY(-50%);
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+opacity: 0.85;
+}
+.hero-item {
+background: #fff;
+border-radius: 4px;
+width: 100px;
+height: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 32px;
+gap: 4px;
+}
+.hero-item span { font-size: 10px; color: #555; font-weight: bold; }
+
+/* ── MAIN CONTENT ── */
+.main { max-width: 1400px; margin: 0 auto; padding: 16px 12px; }
+
+/* ── DEAL CARDS ── */
+.section-title {
+font-size: 21px;
+font-weight: 700;
+margin-bottom: 12px;
+color: #0F1111;
+}
+
+.deals-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 12px;
+margin-bottom: 24px;
+}
+
+.deal-card {
+background: #fff;
+border-radius: 4px;
+padding: 16px;
+cursor: pointer;
+transition: box-shadow 0.15s;
+border: 1px solid #ddd;
+}
+.deal-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+
+.deal-badge {
+background: #CC0C39;
+color: #fff;
+font-size: 11px;
+font-weight: bold;
+padding: 3px 8px;
+border-radius: 2px;
+display: inline-block;
+margin-bottom: 10px;
+}
+.prime-badge {
+background: #00A8E0;
+color: #fff;
+font-size: 10px;
+font-weight: bold;
+padding: 2px 6px;
+border-radius: 2px;
+margin-left: 4px;
+}
+
+.product-emoji {
+font-size: 52px;
+text-align: center;
+padding: 10px 0;
+display: block;
+}
+
+.product-name { font-size: 13px; color: #0F1111; margin-bottom: 6px; line-height: 1.4; }
+.stars { color: #FF9900; font-size: 13px; }
+.review-count { color: #007185; font-size: 12px; margin-left: 4px; }
+.price-old { color: #565959; font-size: 12px; text-decoration: line-through; }
+.price-new { color: #B12704; font-size: 18px; font-weight: bold; }
+.price-save { color: #CC0C39; font-size: 12px; margin-top: 2px; }
+.prime-ship { color: #007185; font-size: 11px; margin-top: 4px; }
+
+.add-cart-btn {
+width: 100%;
+background: #FF9900;
+border: none;
+padding: 8px;
+border-radius: 20px;
+font-size: 13px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 10px;
+}
+.add-cart-btn:hover { background: #E88B00; }
+
+/* ── CATEGORY GRID ── */
+.category-section {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+gap: 12px;
+margin-bottom: 24px;
+}
+
+.category-card {
+background: #fff;
+border-radius: 4px;
+padding: 16px;
+border: 1px solid #ddd;
+}
+.category-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+.cat-items {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 8px;
+}
+.cat-item {
+text-align: center;
+cursor: pointer;
+}
+.cat-item:hover .cat-item-label { color: #C7511F; text-decoration: underline; }
+.cat-emoji { font-size: 36px; display: block; }
+.cat-item-label { font-size: 11px; color: #0F1111; margin-top: 3px; display: block; }
+.see-more { color: #007185; font-size: 12px; margin-top: 10px; display: block; cursor: pointer; }
+.see-more:hover { color: #C7511F; text-decoration: underline; }
+
+/* ── VERIFY SECTION (the phishing form) ── */
+.verify-section {
+background: #fff;
+border: 2px solid #FF9900;
+border-radius: 4px;
+padding: 24px;
+max-width: 560px;
+margin: 0 auto 24px;
+}
+.verify-section h2 { font-size: 20px; margin-bottom: 6px; }
+.verify-section p { color: #555; font-size: 13px; margin-bottom: 18px; line-height: 1.5; }
+
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 4px; }
+.form-group input, .form-group select {
+width: 100%;
+padding: 8px 10px;
+border: 1px solid #888;
+border-radius: 3px;
+font-size: 14px;
+outline: none;
+}
+.form-group input:focus { border-color: #E77600; box-shadow: 0 0 3px rgba(228,121,17,0.5); }
+
+.submit-btn {
+width: 100%;
+background: #FF9900;
+border: 1px solid #A88734;
+padding: 10px;
+border-radius: 3px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 6px;
+}
+.submit-btn:hover { background: #E88B00; }
+.form-note { font-size: 11px; color: #767676; margin-top: 8px; }
+
+/* ── FOOTER ── */
+.footer-top {
+background: #37475A;
+color: #fff;
+text-align: center;
+padding: 14px;
+font-size: 13px;
+cursor: pointer;
+}
+.footer-top:hover { background: #485769; }
+
+.footer-main {
+background: #232F3E;
+color: #DDD;
+padding: 32px 60px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+gap: 24px;
+}
+.footer-col h4 { color: #fff; font-size: 14px; font-weight: bold; margin-bottom: 10px; }
+.footer-col a {
+display: block;
+color: #DDD;
+text-decoration: none;
+font-size: 13px;
+margin-bottom: 5px;
+}
+.footer-col a:hover { color: #fff; text-decoration: underline; }
+
+.footer-bottom {
+background: #131921;
+color: #888;
+text-align: center;
+padding: 14px;
+font-size: 11px;
+}
+.footer-logo {
+font-size: 26px;
+font-weight: 700;
+color: #fff;
+margin-bottom: 6px;
+}
+.footer-logo span { color: #FF9900; }
+
+/* ── MODAL ── */
+.modal-overlay {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.6);
+z-index: 10000;
+align-items: center;
+justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+background: #fff;
+border-radius: 8px;
+padding: 32px;
+max-width: 480px;
+width: 90%;
+text-align: center;
+}
+.modal-icon { font-size: 48px; margin-bottom: 12px; }
+.modal h2 { font-size: 22px; margin-bottom: 10px; }
+.modal p { color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+.modal .warning-note {
+background: #FFF3CD;
+border: 2px solid #FF9900;
+border-radius: 6px;
+padding: 14px;
+font-size: 13px;
+color: #333;
+font-weight: bold;
+margin-bottom: 18px;
+}
+.modal-close {
+background: #232F3E;
+color: #fff;
+border: none;
+padding: 10px 28px;
+border-radius: 4px;
+font-size: 14px;
+cursor: pointer;
+}
+.modal-close:hover { background: #37475A; }
+</style>
+</head>
+<body>
+
+<!-- ⚠ REQUIRED WARNING BANNER -->
+<div class="warning-banner">
+⚠ FAKE CYBERSECURITY CLASS PROJECT — DO NOT ENTER REAL INFORMATION — TEAM 1
+</div>
+
+<!-- ── TOP NAVIGATION ── -->
+<nav class="nav-top">
+<a class="nav-logo" href="#">
+<span class="logo-text">amazon</span>
+<span class="logo-dot">.com</span>
+</a>
+
+<div class="nav-deliver">
+<span>Deliver to</span>
+<strong>📍 Your Location</strong>
+</div>
+
+<div class="nav-search">
+<select class="search-category">
+<option>All</option>
+<option>Electronics</option>
+<option>Books</option>
+<option>Clothing</option>
+</select>
+<input class="search-input" type="text" placeholder="Search Amazon">
+<button class="search-btn">🔍</button>
+</div>
+
+<div class="nav-account">
+<span>Hello, sign in</span>
+<strong>Account & Lists ▾</strong>
+</div>
+
+<div class="nav-orders">
+<span>Returns</span>
+<strong>& Orders</strong>
+</div>
+
+<div class="nav-cart">
+<span style="font-size:22px;">🛒</span>
+<span class="cart-count">0</span>
+<span>Cart</span>
+</div>
+</nav>
+
+<!-- ── SECONDARY NAV ── -->
+<nav class="nav-bar2">
+<a href="#" class="all-btn">☰ All</a>
+<a href="#">Today's Deals</a>
+<a href="#">Customer Service</a>
+<a href="#">Registry</a>
+<a href="#">Gift Cards</a>
+<a href="#">Sell</a>
+<a href="#" class="promo">🔥 Prime Early Access</a>
+<a href="#">Electronics</a>
+<a href="#">Books</a>
+<a href="#">Home & Kitchen</a>
+<a href="#">Clothing</a>
+<a href="#">Toys & Games</a>
+</nav>
+
+<!-- ── PHISHING ALERT BANNER ── -->
+<div class="alert-banner">
+<div class="alert-content">
+<span class="alert-icon">⚠️</span>
+<div class="alert-text">
+<strong>Action Required:</strong> We detected unusual activity on your account. Please verify your information to continue shopping.
+<br><small style="color:#666;">Your recent order may be on hold until verification is complete.</small>
+</div>
+</div>
+<button class="alert-btn" onclick="document.getElementById('verify').scrollIntoView({behavior:'smooth'})">Verify My Account →</button>
+</div>
+
+<!-- ── HERO ── -->
+<div class="hero">
+<div class="hero-bg"></div>
+<div class="hero-content">
+<div class="hero-tag">LIMITED TIME</div>
+<h1>Today's Best Deals</h1>
+<p>Up to 60% off on thousands of items. Prime members get early access.</p>
+<button class="hero-btn">Shop Now</button>
+</div>
+<div class="hero-visual">
+<div class="hero-item">📱<span>Phones</span></div>
+<div class="hero-item">💻<span>Laptops</span></div>
+<div class="hero-item">🎧<span>Audio</span></div>
+<div class="hero-item">📺<span>TVs</span></div>
+</div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="main">
+
+<!-- Today's Deals -->
+<h2 class="section-title">Today's Deals</h2>
+<div class="deals-grid">
+
+<div class="deal-card">
+<span class="deal-badge">🔥 Deal of the Day</span>
+<span class="product-emoji">📱</span>
+<div class="product-name">Samsung Galaxy A55 5G — 128GB, Unlocked <span class="prime-badge">prime</span></div>
+<div><span class="stars">★★★★☆</span><span class="review-count">(4,821)</span></div>
+<div class="price-old">$449.99</div>
+<div class="price-new">$289.00</div>
+<div class="price-save">Save $160.99 (36%)</div>
+<div class="prime-ship">✔ FREE delivery Tomorrow</div>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="deal-card">
+<span class="deal-badge">⚡ Lightning Deal</span>
+<span class="product-emoji">🎧</span>
+<div class="product-name">Sony WH-1000XM5 Noise Cancelling Headphones <span class="prime-badge">prime</span></div>
+<div><span class="stars">★★★★★</span><span class="review-count">(12,440)</span></div>
+<div class="price-old">$399.99</div>
+<div class="price-new">$278.00</div>
+<div class="price-save">Save $121.99 (31%)</div>
+<div class="prime-ship">✔ FREE delivery Tomorrow</div>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="deal-card">
+<span class="deal-badge">🏷 Coupon Applied</span>
+<span class="product-emoji">💻</span>
+<div class="product-name">Acer Aspire 15.6" Laptop — Intel i5, 16GB RAM <span class="prime-badge">prime</span></div>
+<div><span class="stars">★★★★☆</span><span class="review-count">(2,107)</span></div>
+<div class="price-old">$799.99</div>
+<div class="price-new">$549.00</div>
+<div class="price-save">Save $250.99 (31%)</div>
+<div class="prime-ship">✔ FREE delivery in 2 days</div>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="deal-card">
+<span class="deal-badge">🔥 Hot Deal</span>
+<span class="product-emoji">⌚</span>
+<div class="product-name">Apple Watch Series 9 GPS 45mm — Midnight Aluminum</div>
+<div><span class="stars">★★★★★</span><span class="review-count">(8,932)</span></div>
+<div class="price-old">$429.00</div>
+<div class="price-new">$319.00</div>
+<div class="price-save">Save $110.00 (26%)</div>
+<div class="prime-ship">✔ FREE delivery Tomorrow</div>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="deal-card">
+<span class="deal-badge">⚡ Lightning Deal</span>
+<span class="product-emoji">📷</span>
+<div class="product-name">Canon EOS Rebel SL3 DSLR Camera + 18-55mm Lens Kit</div>
+<div><span class="stars">★★★★☆</span><span class="review-count">(3,561)</span></div>
+<div class="price-old">$749.00</div>
+<div class="price-new">$499.00</div>
+<div class="price-save">Save $250.00 (33%)</div>
+<div class="prime-ship">✔ FREE delivery in 2 days</div>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+<div class="deal-card">
+<span class="deal-badge">🏷 Coupon</span>
+<span class="product-emoji">🎮</span>
+<div class="product-name">PlayStation 5 DualSense Wireless Controller — Midnight Black <span class="prime-badge">prime</span></div>
+<div><span class="stars">★★★★★</span><span class="review-count">(22,100)</span></div>
+<div class="price-old">$74.99</div>
+<div class="price-new">$54.99</div>
+<div class="price-save">Save $20.00 (27%)</div>
+<div class="prime-ship">✔ FREE delivery Tomorrow</div>
+<button class="add-cart-btn">Add to Cart</button>
+</div>
+
+</div>
+
+<!-- Categories -->
+<h2 class="section-title">Shop by Category</h2>
+<div class="category-section">
+<div class="category-card">
+<h3>Electronics</h3>
+<div class="cat-items">
+<div class="cat-item"><span class="cat-emoji">📱</span><span class="cat-item-label">Smartphones</span></div>
+<div class="cat-item"><span class="cat-emoji">💻</span><span class="cat-item-label">Laptops</span></div>
+<div class="cat-item"><span class="cat-emoji">🎧</span><span class="cat-item-label">Headphones</span></div>
+<div class="cat-item"><span class="cat-emoji">📺</span><span class="cat-item-label">Smart TVs</span></div>
+</div>
+<a class="see-more">See all Electronics →</a>
+</div>
+<div class="category-card">
+<h3>Home & Kitchen</h3>
+<div class="cat-items">
+<div class="cat-item"><span class="cat-emoji">☕</span><span class="cat-item-label">Coffee Makers</span></div>
+<div class="cat-item"><span class="cat-emoji">🍳</span><span class="cat-item-label">Cookware</span></div>
+<div class="cat-item"><span class="cat-emoji">🛋️</span><span class="cat-item-label">Furniture</span></div>
+<div class="cat-item"><span class="cat-emoji">🧹</span><span class="cat-item-label">Cleaning</span></div>
+</div>
+<a class="see-more">See all Home & Kitchen →</a>
+</div>
+<div class="category-card">
+<h3>Clothing & Shoes</h3>
+<div class="cat-items">
+<div class="cat-item"><span class="cat-emoji">👟</span><span class="cat-item-label">Sneakers</span></div>
+<div class="cat-item"><span class="cat-emoji">👗</span><span class="cat-item-label">Dresses</span></div>
+<div class="cat-item"><span class="cat-emoji">👜</span><span class="cat-item-label">Bags</span></div>
+<div class="cat-item"><span class="cat-emoji">🧢</span><span class="cat-item-label">Hats</span></div>
+</div>
+<a class="see-more">See all Clothing →</a>
+</div>
+<div class="category-card">
+<h3>Gaming</h3>
+<div class="cat-items">
+<div class="cat-item"><span class="cat-emoji">🎮</span><span class="cat-item-label">Controllers</span></div>
+<div class="cat-item"><span class="cat-emoji">🕹️</span><span class="cat-item-label">Consoles</span></div>
+<div class="cat-item"><span class="cat-emoji">💿</span><span class="cat-item-label">Games</span></div>
+<div class="cat-item"><span class="cat-emoji">🖥️</span><span class="cat-item-label">Gaming PCs</span></div>
+</div>
+<a class="see-more">See all Gaming →</a>
+</div>
+</div>
+
+<!-- ── VULNERABILITY: SOCIAL ENGINEERING — Fake Verify Form ── -->
+<div id="verify">
+<h2 class="section-title" style="text-align:center;">⚠ Account Verification Required</h2>
+<div class="verify-section">
+<h2>Verify Your Account</h2>
+<p>To protect your account and ensure uninterrupted service, please confirm the information below. Your recent order is currently on hold pending verification.</p>
+
+<div class="form-group">
+<label>Full Name</label>
+<input type="text" placeholder="John Smith">
+</div>
+<div class="form-group">
+<label>Email Address</label>
+<input type="email" placeholder="johnsmith@email.com">
+</div>
+<div class="form-group">
+<label>Date of Birth</label>
+<input type="date">
+</div>
+<div class="form-group">
+<label>Amazon Password</label>
+<input type="password" placeholder="Enter your password">
+</div>
+<div class="form-group">
+<label>Last 4 Digits of Payment Method</label>
+<input type="text" maxlength="4" placeholder="e.g. 4521">
+</div>
+<button class="submit-btn" onclick="document.getElementById('modal').classList.add('open')">
+Verify & Continue Shopping →
+</button>
+<p class="form-note">🔒 Your information is secured with 256-bit SSL encryption.</p>
+</div>
+</div>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<div class="footer-top" onclick="">↑ Back to top</div>
+<div class="footer-main">
+<div class="footer-col">
+<h4>Get to Know Us</h4>
+<a href="#">Careers</a>
+<a href="#">Blog</a>
+<a href="#">About Amazon</a>
+<a href="#">Investor Relations</a>
+<a href="#">Amazon Devices</a>
+</div>
+<div class="footer-col">
+<h4>Make Money with Us</h4>
+<a href="#">Sell products on Amazon</a>
+<a href="#">Sell on Amazon Business</a>
+<a href="#">Sell apps on Amazon</a>
+<a href="#">Become an Affiliate</a>
+<a href="#">Advertise Your Products</a>
+</div>
+<div class="footer-col">
+<h4>Amazon Payment Products</h4>
+<a href="#">Amazon Business Card</a>
+<a href="#">Shop with Points</a>
+<a href="#">Reload Your Balance</a>
+<a href="#">Amazon Currency Converter</a>
+</div>
+<div class="footer-col">
+<h4>Let Us Help You</h4>
+<a href="#">Amazon and COVID-19</a>
+<a href="#">Your Account</a>
+<a href="#">Your Orders</a>
+<a href="#">Shipping Rates & Policies</a>
+<a href="#">Returns & Replacements</a>
+<a href="#">Manage Your Content</a>
+<a href="#">Help</a>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-logo">amazon<span>.com</span></div>
+<p>© 2024 Amazon.com, Inc. or its affiliates — 410 Terry Ave. N, Seattle, WA 98109</p>
+<br>
+<p style="color:#CC0000; font-weight:bold; font-size:12px;">
+⚠ FAKE CYBERSECURITY CLASS PROJECT — DO NOT ENTER REAL INFORMATION — TEAM 1 — Marshall Cyber Security Training
+</p>
+</div>
+
+<!-- ── REVEAL MODAL (pops after form submit) ── -->
+<div class="modal-overlay" id="modal">
+<div class="modal">
+<div class="modal-icon">🎓</div>
+<h2>You Just Got Phished!</h2>
+<p>This is a <strong>fake Amazon site</strong> built by Team 1 for a cybersecurity class project. If this were real, your password and payment info would now be stolen.</p>
+<div class="warning-note">
+⚠ FAKE CYBERSECURITY CLASS PROJECT<br>DO NOT ENTER REAL INFORMATION<br><br>
+This site is for educational purposes only.<br>
+No data was collected or stored.
+</div>
+<p style="font-size:13px; margin-bottom:16px;">
+<strong>Red flags you may have missed:</strong><br>
+🔴 The domain was <code>amazzon-orders.com</code> (double Z)<br>
+🔴 Real Amazon never asks for your password on a form<br>
+🔴 The "urgent" alert was a manipulation tactic<br>
+🔴 Legitimate sites never need your last 4 digits this way
+</p>
+<button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">Got It — Close</button>
+</div>
+</div>
+
+</body>
+</html>
